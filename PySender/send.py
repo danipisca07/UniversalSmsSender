@@ -18,6 +18,7 @@ headers = {
     'content-type': "application/x-www-form-urlencoded"
 }
 print("Request to ", config.base_url + "?" + payload)
+
 # response = requests.request(config.http_method, config.base_url,
 #                            data=payload, headers=headers)
 
