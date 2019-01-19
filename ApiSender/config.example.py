@@ -1,0 +1,5 @@
+base_url = "https://www.thetexting.com/rest/sms/json/Message/Send"
+api_key = "XXXXXXX"
+api_secret = "XXXXXXX"
+fromSender = "test"
+http_method = "POST"
