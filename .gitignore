@@ -1,2 +1,6 @@
 PySender/config.py
 .vscode/*
+PySender/numbers.npy
+PySender/testNumPy.py
+*.pyc
+

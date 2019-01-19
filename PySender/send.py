@@ -3,11 +3,11 @@ import config
 import sys
 
 if len(sys.argv) != 3:
-    print("USAGE: python3 send.py <toNumber> <message>")
+    print("USAGE: python3 send.py <message> <toNumber>")
     exit
 else:
-    toNumber = sys.argv[1]
-    message = sys.argv[2]
+    message = sys.argv[1]
+    toNumber = sys.argv[2]
 
 #toNumber = "393332583936"
 #message = "Messaggio di test"
