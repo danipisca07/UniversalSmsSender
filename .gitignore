@@ -3,5 +3,6 @@ PySender/config.py
 PySender/numbers.npy
 PySender/testNumPy.py
 *.pyc
-
+v*/
+v*.zip
 *.xlsx
