@@ -38,4 +38,4 @@ for number in numbers:
         print("ERROR: unable to send message to ", number)
 
 duration = time.time() - start
-print("Total of ", count, " sms sent in ", duration, " seconds.")
+print(f"{count} sms sent on a total of {len(numbers)} in {duration} seconds.")

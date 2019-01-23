@@ -28,4 +28,5 @@ for cell in columnA:
         count += 1
 numbersReduced = numbers[0:count]
 np.save("./numbers", numbersReduced)
-print("Found ", len(numbersReduced), " numbers and saved to numbers.npy")
+print("Found ", len(numbersReduced), " numbers in ",
+      path, " and saved to numbers.npy")
