@@ -4,8 +4,4 @@ PySender/numbers.npy
 PySender/testNumPy.py
 *.pyc
 
-PySender/numbers.xlsx
-PySender/nums.xlsx
-PySender/numbers.xlsx
-PySender/nums.xlsx
-PySender/~$numbers.xlsx
+*.xlsx
