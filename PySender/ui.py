@@ -1,6 +1,4 @@
-from tkinter import *
-import time
-import subprocess
+from tkinter import Tk, Frame, Label, Text, Button, END, TOP, BOTTOM, LEFT, RIGHT
 import os
 
 
