@@ -15,6 +15,7 @@ Copy the excel file with the list of numbers (in the first column in the first s
 Start the application:
   - Windows: run the startUI.bat 
   - Linux: coming soon...
+  
 Input the name of the file excel you want to extract the numbers from and click extract(wait for the result)
 Input the message you want to send and click send
 For every number the system will try to send the message at maximum three times, then it will move on to the next number
