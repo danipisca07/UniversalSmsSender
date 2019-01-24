@@ -14,28 +14,30 @@ elif len(sys.argv) == 3:
     message = sys.argv[1]
     numbersFile = sys.argv[2]
 count = 0
-settings = f"api_secret={config.api_secret}&api_key={config.api_key}&from={config.fromSender}"
 numbers = np.load(numbersFile)
 headers = {
     'cache-control': "no-cache",
     'content-type': "application/x-www-form-urlencoded"
 }
+apiPayload = config.apiPayload
+numberField = config.numberField
+messageField = config.messageField
 start = time.time()
 for number in numbers:
-    payload = f"{settings}&to={number}&text={message}"
+    payload = f"{config.apiPayload}&{numberField}={number}&{messageField}={message}"
     # print("Request to ", config.base_url + "?" + payload)
     try:
-        for attempt in range(3):
+        for attempt in range(config.attemptsPerEachMessage):
             response = requests.request(config.http_method, config.base_url,
                                         data=payload, headers=headers)
             json = response.json()
-            if json["Status"] == 0:
+            if json[config.responseStatusField] == 0:
                 count += 1
                 break
         else:
             raise Exception("")
     except Exception as e:
-        print("ERROR: unable to send message to ", number)
+        print(f"{config.sendErrorMessage} {number}")
 
 duration = time.time() - start
-print(f"{count} sms sent on a total of {len(numbers)} in {duration} seconds.")
+print(f"{count} {config.bulkSendResultMessage} {len(numbers)} in {duration} sec.")

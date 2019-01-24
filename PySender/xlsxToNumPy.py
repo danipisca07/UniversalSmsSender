@@ -1,6 +1,7 @@
 import openpyxl
 import sys
 import numpy as np
+import config
 
 if len(sys.argv) != 3:
     print("USAGE: python3 xlsxToNumPy.py <filepath> <nationalPrefix>")
@@ -28,5 +29,4 @@ for cell in columnA:
         count += 1
 numbersReduced = numbers[0:count]
 np.save("./numbers", numbersReduced)
-print("Found ", len(numbersReduced), " numbers in ",
-      path, " and saved to numbers.npy")
+print(f"{len(numbersReduced)} {config.xlsxExtractResultMessage} {path}")

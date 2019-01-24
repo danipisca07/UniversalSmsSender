@@ -1,5 +1,6 @@
 from tkinter import Tk, Frame, Label, Text, Button, END, TOP, BOTTOM, LEFT, RIGHT
 import os
+import config
 
 
 def sendMessages():
@@ -20,19 +21,21 @@ bottomFrame = Frame(root)
 bottomFrame.pack(side=BOTTOM)
 
 # topFrame content
-label1 = Label(topFrame, text='XLSX file path: ', width=16)
+label1 = Label(topFrame, text=config.xlsxFileLabel, width=16)
 filePath = Text(topFrame, width=120, height=1)
 filePath.insert(END, "numbers.xlsx")
 label1.pack(side=LEFT)
-button1 = Button(topFrame, text="Extract numbers", command=extractNumbers)
+button1 = Button(topFrame, text=config.extractNumberLabel,
+                 command=extractNumbers)
 button1.pack(side=RIGHT)
 filePath.pack(side=RIGHT)
 
 # bottomFrame content
-label2 = Label(bottomFrame, text='Message: ', width=16)
+label2 = Label(bottomFrame, text=config.messageLabel, width=16)
 text = Text(bottomFrame, width=120, height=15)
 label2.pack(side=LEFT)
-button2 = Button(bottomFrame, text="Send Messages", command=sendMessages)
+button2 = Button(bottomFrame, text=config.sendMessagesLabel,
+                 command=sendMessages)
 button2.pack(side=RIGHT)
 text.pack(side=RIGHT)
 
